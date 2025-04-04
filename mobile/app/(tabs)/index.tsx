@@ -1,5 +1,5 @@
-import { Image, StyleSheet, Platform } from 'react-native';
-
+import { Image, StyleSheet, Platform, Pressable } from 'react-native';
+import { Alert, Button, View } from 'react-native';
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
@@ -8,7 +8,7 @@ import { ThemedView } from '@/components/ThemedView';
 export default function HomeScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC' , dark: '#8a05be' }}
+      headerBackgroundColor={{ light: '#A1CEDC', dark: '#8a05be' }}
       headerImage={
         <Image
           source={require('@/assets/images/Nubank-Logo.png')}
@@ -20,7 +20,22 @@ export default function HomeScreen() {
         <HelloWave />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">R$ 11.400</ThemedText>
+        <ThemedText type="subtitle">Saldo:R$ 11.400</ThemedText>
+        
+        <Pressable
+  style={{
+    backgroundColor: '#8d00d8',
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 50,
+    width: 65,
+  }}
+  onPress={() => {
+    console.log('You tapped the button!');
+  }}
+>
+  <ThemedText style={{ color: 'white', fontSize: 16 }}>PIX</ThemedText>
+</Pressable>
         <ThemedText>
           <ThemedText type="defaultSemiBold"></ThemedText>
           <ThemedText type="defaultSemiBold">
@@ -40,11 +55,18 @@ export default function HomeScreen() {
         </ThemedText>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Beneficios da sua conta parceiro!</ThemedText>
+        <ThemedText type="subtitle">Benefícios da sua conta parceiro!</ThemedText>
+        <Button color="#8d00d8"
+          onPress={() => {
+            console.log('You tapped the button!');
+          }}
+          title="Press Me"
+        />
+
         <ThemedText>
-          
+
           <ThemedText type="defaultSemiBold"></ThemedText>
-          <ThemedText type="defaultSemiBold"></ThemedText> 
+          <ThemedText type="defaultSemiBold"></ThemedText>
           <ThemedText type="defaultSemiBold"></ThemedText>
           <ThemedText type="defaultSemiBold"></ThemedText>
         </ThemedText>
@@ -64,8 +86,8 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   reactLogo: {
-    height: 178,
-    width: 290,
+    height: '100%',
+    width: '100%',
     bottom: 0,
     left: 0,
     position: 'absolute',
