@@ -7,8 +7,8 @@ import { ThemedView } from '@/components/ThemedView';
 
 export default function HomeScreen() {
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#8a05be' }}
+   <ParallaxScrollView
+      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
       headerImage={
         <Image
           source={require('@/assets/images/Nubank-Logo.png')}
@@ -60,7 +60,7 @@ export default function HomeScreen() {
           onPress={() => {
             console.log('You tapped the button!');
           }}
-          title="Press Me"
+          title="Benefícios"
         />
 
         <ThemedText>

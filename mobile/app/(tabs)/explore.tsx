@@ -10,12 +10,10 @@ import { IconSymbol } from '@/components/ui/IconSymbol';
 export default function TabTwoScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
+      headerBackgroundColor={{ light: '#D0D0D0', dark: '#1D3D47' }}
       headerImage={
-        <IconSymbol
-          size={310}
-          color="#808080"
-          name="chevron.left.forwardslash.chevron.right"
+        <Image
+          source={require('@/assets/images/392446.webp')}
           style={styles.headerImage}
         />
       }>
@@ -23,73 +21,37 @@ export default function TabTwoScreen() {
         <ThemedText type="title">!Benefícios do Nubank!</ThemedText>
       </ThemedView>
       <ThemedText>Os Benefícios podem variar dependendo do tipo do cartão.</ThemedText>
-      <Collapsible title="Cartão Viajem">
+      <Collapsible title="Cartão Viagem">
         <ThemedText>
-          This app has two screens:{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/explore.tsx</ThemedText>
-        </ThemedText>
-        <ThemedText>
-          The layout file in <ThemedText type="defaultSemiBold">app/(tabs)/_layout.tsx</ThemedText>{' '}
-          sets up the tab navigator.
-        </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/router/introduction">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Android, iOS, and web support">
-        <ThemedText>
-          You can open this project on Android, iOS, and the web. To open the web version, press{' '}
-          <ThemedText type="defaultSemiBold">w</ThemedText> in the terminal running this project.
+          Tem duas vantagens principais:{' '}
+          <ThemedText type="defaultSemiBold">Pode ser usado em qualquer lugar do mundo sem taxas extras, à exceção do IOF, imposto obrigatório do governo</ThemedText> e{' '}
+          <ThemedText type="defaultSemiBold">O cartão Nubank Mastercard Platinum oferece consultoria de viagem para auxiliar em destinos, roteiros, seleção de hotéis e resort.</ThemedText>
         </ThemedText>
       </Collapsible>
-      <Collapsible title="Images">
+      <Collapsible title="cartão ultravioleta">
         <ThemedText>
-          For static images, you can use the <ThemedText type="defaultSemiBold">@2x</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">@3x</ThemedText> suffixes to provide files for
-          different screen densities
+        Seguro para imprevistos com o carro alugado{' '}
+          <ThemedText type="defaultSemiBold">e</ThemedText> Atendimento personalizado e resolutivo 24 horas por dia, todos os dias da semana.
         </ThemedText>
-        <Image source={require('@/assets/images/react-logo.png')} style={{ alignSelf: 'center' }} />
+      </Collapsible>
+      <Collapsible title="Cartão Roxinho">
+        <ThemedText>
+        Não tem anuidade ou tarifas escondidas<ThemedText type="defaultSemiBold"></ThemedText> e{' '}
+          <ThemedText type="defaultSemiBold"></ThemedText> Permite criar um cartão virtual para compras online.
+        </ThemedText>
+         /
         <ExternalLink href="https://reactnative.dev/docs/images">
-          <ThemedText type="link">Learn more</ThemedText>
         </ExternalLink>
       </Collapsible>
-      <Collapsible title="Custom fonts">
+      <Collapsible title="Cartão pj">
         <ThemedText>
-          Open <ThemedText type="defaultSemiBold">app/_layout.tsx</ThemedText> to see how to load{' '}
+          Open <ThemedText type="defaultSemiBold">Organize as suas finanças separando as despesas pessoais e profissionais</ThemedText>  e{' '}
           <ThemedText style={{ fontFamily: 'SpaceMono' }}>
-            custom fonts such as this one.
+          Acumule pontos no Mastercard Surpreenda Empresas e troque-os por ofertas especiais.
           </ThemedText>
         </ThemedText>
         <ExternalLink href="https://docs.expo.dev/versions/latest/sdk/font">
-          <ThemedText type="link">Learn more</ThemedText>
         </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Light and dark mode components">
-        <ThemedText>
-          This template has light and dark mode support. The{' '}
-          <ThemedText type="defaultSemiBold">useColorScheme()</ThemedText> hook lets you inspect
-          what the user's current color scheme is, and so you can adjust UI colors accordingly.
-        </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/develop/user-interface/color-themes/">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Animations">
-        <ThemedText>
-          This template includes an example of an animated component. The{' '}
-          <ThemedText type="defaultSemiBold">components/HelloWave.tsx</ThemedText> component uses
-          the powerful <ThemedText type="defaultSemiBold">react-native-reanimated</ThemedText>{' '}
-          library to create a waving hand animation.
-        </ThemedText>
-        {Platform.select({
-          ios: (
-            <ThemedText>
-              The <ThemedText type="defaultSemiBold">components/ParallaxScrollView.tsx</ThemedText>{' '}
-              component provides a parallax effect for the header image.
-            </ThemedText>
-          ),
-        })}
       </Collapsible>
     </ParallaxScrollView>
   );
@@ -98,8 +60,8 @@ export default function TabTwoScreen() {
 const styles = StyleSheet.create({
   headerImage: {
     color: '#808080',
-    bottom: -90,
-    left: -35,
+    height: "100%",
+    width: "100%",
     position: 'absolute',
   },
   titleContainer: {
